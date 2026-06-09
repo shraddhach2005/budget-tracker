@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Budget Tracker</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="login">
+  <h2>Login</h2>
+  <input id="loginUser" placeholder="Username"/>
+  <input id="loginPass" type="password" placeholder="Password"/>
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+  <h1>💰 Smart Budget Tracker</h1>
+
+  <button onclick="toggleDark()">🌙 Dark Mode</button>
+  <button onclick="exportPDF()">📄 Export PDF</button>
+
+  <!-- BUDGET -->
+  <div class="card">
+    <h3>Set Budget</h3>
+    <input id="budget-input" type="number"/>
+    <button id="set-budget">Set Budget</button>
+  </div>
+
+  <!-- EXPENSE -->
+  <div class="card">
+    <h3>Add Expense</h3>
+
+    <input id="title" placeholder="Title"/>
+    <input id="amount" type="number" placeholder="Amount"/>
+
+    <select id="category">
+      <option>Food</option>
+      <option>Travel</option>
+      <option>Bills</option>
+      <option>Other</option>
+    </select>
+
+    <select id="month">
+      <option>Jan</option>
+      <option>Feb</option>
+      <option>Mar</option>
+      <option>Apr</option>
+    </select>
+
+    <button id="add-expense">Add</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard">
+    <div>Budget: <span id="budget">0</span></div>
+    <div>Expense: <span id="expense">0</span></div>
+    <div>Balance: <span id="balance">0</span></div>
+  </div>
+
+  <!-- CHART -->
+  <div class="card">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <!-- LIST -->
+  <div id="list"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

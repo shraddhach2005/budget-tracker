@@ -1,0 +1,107 @@
+body {
+  font-family: Poppins;
+  background: #f4f6ff;
+  margin: 0;
+  transition: 0.3s;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+input, select, button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* LOGIN */
+.login {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #0f172a;
+  color: white;
+}
+
+body.dark .card,
+body.dark .dashboard,
+body.dark .item {   
+  background: #1e293b;
+  color: white;
+}
+
+body.dark input,
+body.dark select {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+}
+
+body.dark button {
+  background: #334155;
+}
+
+#chart {
+  width: 300px !important;
+  height: 300px !important;
+  margin: 20px auto;
+  display: block;
+}
